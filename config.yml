@@ -24,42 +24,42 @@ before:
 
 steps:
 # Step 1: Create a project board to view your work
-- title: # the title of the step, shown to the learner in the course progress page
+- title: # Create a project board to view your work
   description: # a description of the step, shown to the learner in the course progress page
   event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 2: Create an issue to show on your board automatically
-# - title: # the title of the step, shown to the learner in the course progress page
+# - title: # Create an issue to show on your board automatically
 #  description: # a description of the step, shown to the learner in the course progress page
 #  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 3: Move your issue to the next column
-# - title: # the title of the step, shown to the learner in the course progress page
+# Step 3: Move your issue to the done column
+# - title: # Move your issue to the done column
 #  description: # a description of the step, shown to the learner in the course progress page
 #  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 4: Create a new branch
-# - title: # the title of the step, shown to the learner in the course progress page
+# - title: # Create a new branch
 #  description: # a description of the step, shown to the learner in the course progress page
 #  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 5: Add some "code", commit and create a PR
-# - title: # the title of the step, shown to the learner in the course progress page
+# - title: # Add some "code", commit and create a PR
 #  description: # a description of the step, shown to the learner in the course progress page
 #  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 6: Complete the PR and see the "card" move in the project board 
-# - title: # the title of the step, shown to the learner in the course progress page
+# - title: # Complete the PR and see the "card" move in the project board 
 #  description: # a description of the step, shown to the learner in the course progress page
 #  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
 #  actions: # a list of the actions that will occur when the step is triggered by an event
