@@ -33,8 +33,8 @@ steps:
     operator: ===
     right: "Project1"
     else:
-    - type: respond
-      with: 01_try-again.md
+  - type: respond
+    with: 01_try-again.md
   - type: respond
   with: 01_nice-work.md
 
