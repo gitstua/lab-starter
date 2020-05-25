@@ -1,4 +1,4 @@
-title: GitHub for Canberra Cloud Solution Architects (and Rob)
+title: GitHub for Canberra Cloud Solution Architects and Rob
 tagline: Short workshop to celebrate Microsoft Learning Day
 description: Get started with Issues, Projects, Actions and Code
 
@@ -9,6 +9,7 @@ description: Get started with Issues, Projects, Actions and Code
 template:
   name: csa-github-lab-student
   repo: csa-github-lab
+  description: desc
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
