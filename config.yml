@@ -7,8 +7,8 @@ tags:
   - Continuous Integration
   - Integration
 template:
-  repo: using-github-actions-for-ci-template
-  name: github-actions-for-ci
+  repo: csa-github-lab-template
+  name: github-actions-for-ci2
 before:
   # 1. Bot creates [Tic tac toe game](https://github.com/githubtraining/actions-template) for the learner, protects master branch
   # 1. Bot opens a bug report explaining the app is broken, asks learner to figure out what's wrong by adding some testing. 
