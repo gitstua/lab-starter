@@ -1,20 +1,25 @@
-# Title
+# Create a project board to view your work
 
-This is the paragraph to would describe the concept. It may link to other resources, or include images. Try to avoid _too_ much information and _too_ many external links. The purpose of these paragraphs is to give the user the information they need to complete the activity, understand what they're doing, and understand why they're doing it.
+In GitHub you can create a Project board to track work
+
+At the top of your respository you will see buttons to select the tab which you wish to work in.
+
+Select **Projects** then **Create a Project**
+
 
 ### More detail 
 
 If there are concepts that should be described separately, they might belong in a subparagraph section like this one.
 
-## Step X: Description
+## Step 1: Description
 
-Here, we'll describe generally what the user is about to do.
+Create a project board to view your work.
 
 ### :keyboard: Activity: Specific description
 
-1. Step 1 in short sentence
-2. Step 2 in short sentence
-3. Step 3 in short sentence
+1. Select Project
+2. Select add a new Project
+3. Select Automated Kanban as the template
 
 <hr>
 <h3 align="center">Watch below this comment for my response</h3>
