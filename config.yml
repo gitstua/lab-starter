@@ -29,9 +29,9 @@ steps:
   event: project.create
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
-      left: '%payload.project.name%'
-      operator: ===
-      right: Project1
+    left: '%payload.project.name%'
+    operator: ===
+    right: "Project1"
 
 # Step 2: Create an issue to show on your board automatically
  - title: Create an issue to show on your board automatically
