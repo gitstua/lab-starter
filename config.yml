@@ -1,29 +1,82 @@
-title: GH for Canberra CSAs and Rob
-tagline: Short workshop to celebrate Microsoft Learning Day
-description: 'Get started with Issues, Projects, Actions and Code'
+title: "gitstua test"
+description: Learn how to create workflows that enable you to use Continuous Integration (CI) for your projects.
+tags:
+  - GitHub Actions
+  - Workflows
+  - CI
+  - Continuous Integration
+  - Integration
 template:
-  name: csa-lab2
-  repo: csa-github-lab-template
+  repo: using-github-actions-for-ci-template
+  name: github-actions-for-ci
 before:
-  - type: respond
-    with: 01_first-response.md
+  # 1. Bot creates [Tic tac toe game](https://github.com/githubtraining/actions-template) for the learner, protects master branch
+  # 1. Bot opens a bug report explaining the app is broken, asks learner to figure out what's wrong by adding some testing. 
+  - type: updateBranchProtection
+  - type: createIssue
+    title: There's a bug!
+    body: 00_bug.md
+    data:
+      actionsUrl: '%payload.repository.html_url%/actions/new'
 
-# Steps for the course
-# A list of steps that take the learner through the course
-# Create one step for each action that a learner will complete
+# Repository artifacts
+# 1. Issue: There's a bug!
+# 2. PR: CI for Node (learner)
+# 3. PR: Add jest tests (bot)
+# 4. Issue: A workflow for the entire team
+# 5. PR: Improve CI (learner)
+# 6. PR: A custom workflow (bot)
+# 7. Issue: Congratulations
 
 steps:
-# Step 1: Create a project board to view your work
-- title: Create a project board to view your work
-  description: Create a project board to view your work
-  event: project.created
-  actions:
-    - type: gate
-      left: '%payload.project.name%'
-      operator: ===
-      right: "Project1"
-      else:
-        type: respond
-        with: 01_try-again.md
-    - type: respond
-      with: 01_nice-work.md
+
+  # Step 1
+  # 1. Learner opens a PR with a new workflow by using the [templated workflow for Node](https://github.com/actions/starter-workflows/blob/master/ci/nodejs.yml)
+  # 1. Bot leaves line-specific comments explaining the pieces that were just added from the templated workflow. 
+  - title: Use a templated workflow
+    description: Create a pull request with a templated workflow
+    event: pull_request
+    link: '{{ repoUrl }}/issues/1'
+    actions:
+      - type: gate
+        gates:
+        - left: '%payload.action%'
+          operator: ===
+          right: opened
+        - left: '%payload.action%'
+          operator: ===
+          right: edited
+      - type: gate
+        left: '%payload.pull_request.title%'
+        operator: ===
+        right: CI for Node
+        else:
+          - type: respond
+            with: e-rename-pr.md
+            data:
+              title: CI for Node
+      - type: respond
+        with: 01_explain-template.md
+        data:
+          actionsUrl: '%payload.repository.html_url%/actions'
+      - type: createPullRequestComment
+        position: 3
+        file: .github/workflows/nodejs.yml
+        body: 01_explain-on.md
+      - type: createPullRequestComment
+        position: 8
+        file: .github/workflows/nodejs.yml
+        body: 01_explain-job.md
+      - type: createPullRequestComment
+        position: 17
+        file: .github/workflows/nodejs.yml
+        body: 01_explain-checkout.md
+      - type: createPullRequestComment
+        position: 24
+        file: .github/workflows/nodejs.yml
+        body: 01_explain-run.md
+      - type: createPullRequest
+        title: Add jest tests
+        body: 01_merge-jest.md
+        base: '%payload.pull_request.head.ref%'
+        head: add-jest
