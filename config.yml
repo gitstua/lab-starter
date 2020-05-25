@@ -7,7 +7,7 @@ description: Get started with Issues, Projects, Actions and Code
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name: csa-github-lab
+  name: csa-github-lab-student
   repo: csa-github-lab
 
 # `before` block
