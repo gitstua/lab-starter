@@ -15,24 +15,24 @@ before:
 steps:
 # Step 1: Create a project board to view your work
 - title: Create a project board to view your work
-    description: Create a project board to view your work # a description of the step, shown to the learner in the course progress page
-    event: project.created
-    actions: # a list of the actions that will occur when the step is triggered by an event
-    - type: gate
-      left: '%payload.project.name%'
-      operator: ===
-      right: "Project1"
-      else:
-        type: respond
-        with: 01_try-again.md
-    - type: respond
-      with: 01_nice-work.md
+  description: Create a project board to view your work # a description of the step, shown to the learner in the course progress page
+  event: project.created
+  actions: # a list of the actions that will occur when the step is triggered by an event
+  - type: gate
+    left: '%payload.project.name%'
+    operator: ===
+    right: "Project1"
+    else:
+      type: respond
+      with: 01_try-again.md
+  - type: respond
+    with: 01_nice-work.md
 
 # Step 2: Create an issue to show on your board automatically
 - title: Create an issue to show on your board automatically
-description: Create an issue to show on your board automatically
-event: issues # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-actions: # a list of the actions that will occur when the step is triggered by an event
+  description: Create an issue to show on your board automatically
+  event: issues
+  actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
     left: '%payload.project.name%'
     operator: ===
@@ -45,9 +45,9 @@ actions: # a list of the actions that will occur when the step is triggered by a
 
 # Step 3: Move your issue to the done column
 - title: Move your issue to the done column
-description: Move your issue to the done column
-event: project_card.moved # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-actions: # a list of the actions that will occur when the step is triggered by an event
+  description: Move your issue to the done column
+  event: project_card.moved # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
     left: '%payload.project.name%'
     operator: ===
@@ -60,9 +60,9 @@ actions: # a list of the actions that will occur when the step is triggered by a
 
 # Step 4: Create a new branch
 - title: Create a new branch
-description: Create a new branch
-event: create # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-actions: # a list of the actions that will occur when the step is triggered by an event
+  description: Create a new branch
+  event: create # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
     left: '%payload.project.name%'
     operator: ===
@@ -75,9 +75,9 @@ actions: # a list of the actions that will occur when the step is triggered by a
 
 # Step 5: Add some "code", commit and create a PR
 - title: Add some "code", commit and create a PR
-description: Add some "code", commit and create a PR # a description of the step, shown to the learner in the course progress page
-event: pull_request.opened # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-actions: # a list of the actions that will occur when the step is triggered by an event
+  description: Add some "code", commit and create a PR # a description of the step, shown to the learner in the course progress page
+  event: pull_request.opened # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
     left: '%payload.project.name%'
     operator: ===
@@ -90,9 +90,9 @@ actions: # a list of the actions that will occur when the step is triggered by a
 
 # Step 6: Complete the PR and see the "card" move in the project board 
 - title: Complete the PR and see the "card" move in the project board 
-description: Complete the PR and see the "card" move in the project board  # a description of the step, shown to the learner in the course progress page
-event: pull_request.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-actions: # a list of the actions that will occur when the step is triggered by an event
+  description: Complete the PR and see the "card" move in the project board  # a description of the step, shown to the learner in the course progress page
+  event: pull_request.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
     left: '%payload.project.name%'
     operator: ===
