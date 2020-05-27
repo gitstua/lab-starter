@@ -6,7 +6,7 @@ template:
 before:
   - type: createIssue
     title: Welcome!
-    body: new-issue.md
+    body: 01first-response.md
 steps:
   - title: Create a project board to view your work
     description: Create a project board to view your work
@@ -18,6 +18,6 @@ steps:
         right: Project1
         else:
           type: respond
-          with: 01_try-again.md
+          with: 01try-again.md
       - type: respond
-        with: 01_nice-work.md
+        with: 01nice-work.md
