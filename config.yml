@@ -5,7 +5,7 @@ template:
   name: csa-lab2
 before:
   - type: createIssue
-    title: Welcome!
+    title: Welcome
     body: 01first-response.md
 steps:
   - title: Create a project board to view your work
