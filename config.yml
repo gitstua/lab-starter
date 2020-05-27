@@ -4,6 +4,7 @@ description: 'Get started with Issues, Projects, Actions and Code'
 template:
     name: csa-lab2
     repo: csa-github-lab
+    description: repo for lab
 before:
   - type: respond
     with: 01_first-response.md
