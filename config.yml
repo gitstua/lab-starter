@@ -12,12 +12,5 @@ steps:
     description: Create a project board to view your work
     event: project.created
     actions:
-      - type: gate
-        left: '%payload.project.name%'
-        operator: ===
-        right: Project1
-        else:
-          type: respond
-          with: 01try-again.md
       - type: respond
         with: 01nice-work.md
