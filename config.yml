@@ -1,21 +1,15 @@
 title: GH for Canberra CSAs and Rob
-tagline: Short workshop to celebrate Microsoft Learning Day
-description: 'Get started with Issues, Projects, Actions and Code'
+description: Get started with Issues Projects Actions and Code
 template:
-    name: csa-lab2
-    repo: csa-github-lab
-    description: repo for lab
+  repo: csa-github-lab
+  name: csa-lab2
 before:
-  - type: respond
-    with: 01_first-response.md
-
-# Steps for the course
-# A list of steps that take the learner through the course
-# Create one step for each action that a learner will complete
-
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
 steps:
 # Step 1: Create a project board to view your work
-- title: Create a project board to view your work
+  - title: Create a project board to view your work
   description: Create a project board to view your work # a description of the step, shown to the learner in the course progress page
   event: project.created
   actions: # a list of the actions that will occur when the step is triggered by an event
